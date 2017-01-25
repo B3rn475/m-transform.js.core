@@ -1,0 +1,35 @@
+{
+  "name": "m-transform.js.core",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B3rn475/m-transform.js.core.git"
+  },
+  "author": "Carlo Bernaschina (GitHub: B3rn475)",
+  "license": "MIT",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://github.com/B3rn475/m-transform.js.core/raw/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/B3rn475/m-transform.js.core/issues"
+  },
+  "homepage": "https://github.com/B3rn475/m-transform.js.core#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "async": "^1.4.2",
+    "coveralls": "latest",
+    "istanbul": "latest",
+    "mocha": "latest",
+    "sinon": "^1.17.7"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  }
+}
