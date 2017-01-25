@@ -33,11 +33,11 @@ describe('Rule', function () {
         });
     });
     describe('Creation', function () {
-        it('should return a field if used with new', function () {
+        it('should return a Rule if used with new', function () {
             var rule = new Rule(noop, noop);
             assert.equal(rule instanceof Rule, true);
         });
-        it('should return a field if used without new', function () {
+        it('should return a Rule if used without new', function () {
             var rule = createRule(noop, noop);
             assert.equal(rule instanceof Rule, true);
         });
@@ -46,6 +46,8 @@ describe('Rule', function () {
             assert.throws(function () { createRule(null, noop); });
             assert.throws(function () { createRule([], noop); });
             assert.throws(function () { createRule({}, noop); });
+            assert.throws(function () { createRule('', noop); });
+            assert.throws(function () { createRule(/ /, noop); });
             assert.throws(function () { createRule(0, noop); });
             assert.throws(function () { createRule(1, noop); });
         });
@@ -55,6 +57,8 @@ describe('Rule', function () {
             assert.throws(function () { createRule(noop, null); });
             assert.throws(function () { createRule(noop, []); });
             assert.throws(function () { createRule(noop, {}); });
+            assert.throws(function () { createRule(noop, ''); });
+            assert.throws(function () { createRule(noop, / /); });
             assert.throws(function () { createRule(noop, 0); });
             assert.throws(function () { createRule(noop, 1); });
         });
