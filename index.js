@@ -6,7 +6,7 @@
 
 var Transformer = require('./lib/transformer'),
     Rule = require('./lib/rule'),
-    Exception =  = require('./lib/exception');
+    Exception = require('./lib/exception');
 
 // Constructors
 exports.Transformer = Transformer;
