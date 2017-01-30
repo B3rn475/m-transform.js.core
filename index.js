@@ -5,11 +5,13 @@
 "use strict";
 
 var Transformer = require('./lib/transformer'),
-    Rule = require('./lib/rule');
+    Rule = require('./lib/rule'),
+    Exception =  = require('./lib/exception');
 
 // Constructors
 exports.Transformer = Transformer;
 exports.Rule = Rule;
+exports.Exception = Exception;
 
 // Maker Functions
 exports.createTransformer = Transformer;
