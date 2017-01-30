@@ -6,6 +6,7 @@
 
 var Transformer = require('./lib/transformer'),
     Rule = require('./lib/rule'),
+    Reducer = require('./lib/reducer'),
     Exception = require('./lib/exception');
 
 // Constructors
@@ -16,3 +17,10 @@ exports.Exception = Exception;
 // Maker Functions
 exports.createTransformer = Transformer;
 exports.createRule = Rule;
+
+// Helpers
+exports.first = Reducer.first;
+exports.last = Reducer.last;
+exports.min = Reducer.min;
+exports.max = Reducer.max;
+exports.concat = Reducer.concat;
